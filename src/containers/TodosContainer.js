@@ -7,7 +7,7 @@ import Todos from "../components/Todos";
 function TodosContainer() {
     // useSelector 에서 꼭 객체를 반환 할 필요는 없습니다.
     // 한 종류의 값만 조회하고 싶으면 그냥 원하는 값만 바로 반환하면 됩니다.
-    const todos = useSelector(state => state.todosReducer);
+    const todos = useSelector(state => state.todosReducer); //state가 reducer의 이름을 딴 객체로 전달된다.
     const dispatch = useDispatch();
   
     const onCreate = text => dispatch(addTodo(text));
